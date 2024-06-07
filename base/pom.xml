@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>firok.test.annotation-retention-test</groupId>
+    <artifactId>base</artifactId>
+    <version>0.1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>annotation-source</module>
+        <module>annotation-class</module>
+        <module>annotation-runtime</module>
+        <module>apt</module>
+        <module>project-source-a</module>
+        <module>project-source-b</module>
+        <module>project-class-a</module>
+        <module>project-class-b</module>
+    </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+        <topaz.version>7.27.0</topaz.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>firok</groupId>
+                <artifactId>topaz</artifactId>
+                <version>${topaz.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>apt</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>annotation-source</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>annotation-runtime</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>annotation-class</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>project-source-a</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>project-source-b</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>project-class-a</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>firok.test.annotation-retention-test</groupId>
+                <artifactId>project-class-b</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>
